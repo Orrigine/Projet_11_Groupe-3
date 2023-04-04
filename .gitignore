@@ -21,6 +21,11 @@
 
 # Visual Studio cache directory
 .vs/
+.vscode
+.vsconfig
+.editorconfig
+NuGet/
+omnisharp.json
 
 # Gradle cache directory
 .gradle/
