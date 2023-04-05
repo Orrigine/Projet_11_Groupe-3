@@ -19,7 +19,7 @@ Shader "Learning/Unlit/TO RENAME"
 
             #include "UnityCG.cginc"
 
-            Sampler2D _Albedo0, _Albedo1, _Mask;
+            sampler2D _Albedo0, _Albedo1, _Mask;
 
 			
 			struct vertexInput

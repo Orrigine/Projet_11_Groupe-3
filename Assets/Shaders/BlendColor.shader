@@ -31,15 +31,17 @@ Shader "Shaders/BlendColor"
             struct v2f
             {
                 float4 vertex : SV_POSITION;    
+                float2 uv : TEXCOORD0;
+                float4 worldSpacePos : TEXCOORD1;
             };
 
             v2f vert (vertexInput v)
             {
                 v2f o;
 
-	            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex)
+	            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
                 o.uv = v.uv;
-                o.worldSpacePos = mul(unity_ObjectToWorld, v.vertex)
+                o.worldSpacePos = mul(unity_ObjectToWorld, v.vertex);
 
                 return o;
             }
