@@ -1,7 +1,7 @@
 Shader "Shaders/WorldXColor"
 {
     Properties{
-        _Albedo0("Albedo", 2D) = "white" {} _ScrollSpeed("Scroll Speed", Range(0, 1)) = 0.5}
+        _MainTex("Albedo", 2D) = "white" {} _ScrollSpeed("Scroll Speed", Range(0, 1)) = 0.5}
 
     SubShader
     {
@@ -15,33 +15,33 @@ Shader "Shaders/WorldXColor"
 
 #include "UnityCG.cginc"
 
-            sampler2D _Albedo0;
+            sampler2D _MainTex;
+            float2 _Speed;
 
             struct vertexInput
             {
                 float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                float3 worldSpacePos : TEXCOORD0;
-                float4 uv : TEXCOORD1;
+                float2 uv : TEXCOORD0;
             };
 
             v2f vert(vertexInput v)
             {
                 v2f o;
-                o.uv = v.uv;
                 o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
-                o.worldSpacePos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.uv = v.uv + float2(_Speed.x * _Time.y, _Speed.y * _Time.y);
 
                 return o;
             }
 
             float4 frag(v2f i) : SV_Target
             {
-                return tex2D(_Albedo0, (i.uv + _Time.y) * _ScrollSpeed);
+                return tex2D(_MainTex, i.uv);
             }
 
             ENDHLSL
