@@ -58,6 +58,39 @@ Shader "Learning/Unlit/TO RENAME"
             }
 
             ENDHLSL
-        }
+        }Assets/Materials/AnimTex.mat
+        new file:   Assets/Materials/AnimTex.mat.meta
+        new file:   Assets/Materials/MaterialPlants.mat
+        new file:   Assets/Materials/MaterialPlants.mat.meta
+        new file:   Assets/Materials/Perturbation.mat
+        new file:   Assets/Materials/Perturbation.mat.meta
+        renamed:    Assets/Materials/WorldXColor.mat -> Assets/Materials/Plants.mat
+        new file:   Assets/Materials/Plants.mat.meta
+        new file:   Assets/Materials/ShaderGraph.mat
+        new file:   Assets/Materials/ShaderGraph.mat.meta
+        new file:   Assets/Materials/T_Plants_d.mat
+        new file:   Assets/Materials/T_Plants_d.mat.meta
+        new file:   Assets/Meshes.meta
+        new file:   Assets/Meshes/3D Models.meta
+        new file:   Assets/Meshes/3D Models/SM_Fern_01.FBX
+        new file:   Assets/Meshes/3D Models/SM_Fern_01.FBX.meta
+        new file:   Assets/Meshes/3D Models/SM_plant_01.FBX
+        new file:   Assets/Meshes/3D Models/SM_plant_01.FBX.meta
+        new file:   Assets/Noise Map.meta
+        new file:   Assets/Noise Map/T_Distortion.png
+        new file:   Assets/Noise Map/T_Distortion.png.meta
+        modified:   Assets/Scenes/SampleScene.unity
+        modified:   Assets/Settings/URP-Balanced.asset
+        modified:   Assets/Settings/URP-Performant.asset
+        new file:   Assets/Shaders/Perturbation.shader
+        new file:   Assets/Shaders/Perturbation.shader.meta
+        new file:   Assets/Shaders/Plants.shader
+        new file:   Assets/Shaders/Plants.shader.meta
+        new file:   Assets/Shaders/ShaderGraph.meta
+        new file:   Assets/Shaders/ShaderGraph/Ref.shadergraph
+        new file:   Assets/Shaders/ShaderGraph/Ref.shadergraph.meta
+        modified:   Assets/Shaders/WorldXColor.shader
+        new file:   Assets/Textures/T_Plants_d.TGA
+        new file:   Assets/Textures/T_Plants_d.TGA.meta
     }
 }
