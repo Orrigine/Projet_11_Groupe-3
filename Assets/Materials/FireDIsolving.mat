@@ -51,8 +51,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Burn: 0.59
+    - _DistorsionAmount: 1
+    - _HeatWave: 0.45
     - _QueueControl: 0
-    - _ScrollingSpeed: 0.4
+    - _ScrollingSpeed: 0.23
     m_Colors: []
   m_BuildTextureStacks: []
 --- !u!114 &2346451599765088520
