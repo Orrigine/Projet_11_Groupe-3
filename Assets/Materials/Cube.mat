@@ -43,16 +43,26 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 1
-    - _Color_Amplitude: 3
-    - _Max_Size: 2
-    - _Min_size: 0.3
+    - _ColorSpeed: 1
+    - _Color_Amplitude: 1.04
+    - _Color_Speed: 2.71
+    - _Height_Amplitude: 0.65
+    - _Height_Speed: 1.96
+    - _MaxColor: 1
+    - _Max_Size: 1.36
+    - _Max_height: 1.72
+    - _MinColor: 0
+    - _Min_height: -0.93
+    - _Min_size: 0.29
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size_Amplitude: 0.427
-    - _Size_Speed: 1.88
+    - _Size_Amplitude: 0.23
+    - _Size_Speed: 2.25
+    - _Speed: 1.33
     m_Colors:
-    - _BrightnessColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Cube_Color: {r: 0, g: 0.7169812, b: 0.7169812, a: 0}
+    - _BrightnessColor: {r: 0.40646985, g: 0.11974903, b: 0.6509434, a: 1}
+    - _Cube_Color: {r: 0.26415086, g: 0, b: 0.5, a: 0}
+    - _ShiningColor: {r: 0.046813726, g: 0.012991219, b: 0.0073529417, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1321797818174871435
 MonoBehaviour:
