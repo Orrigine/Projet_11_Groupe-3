@@ -1,8 +1,9 @@
-Shader "Learning/Unlit/TO RENAME"
+Shader "Learning/Unlit/Mentalist"
 {
     Properties
     {   
         // NOM_VARIABLE("NOM_AFFICHE_DANS_L'INSPECTOR", Shaderlab type) = defaultValue
+        _Albedo0("Gradient Map", 2D) = "white" {}
     }
     
     SubShader
@@ -17,28 +18,31 @@ Shader "Learning/Unlit/TO RENAME"
 
             #include "UnityCG.cginc"
 			
+            
 			struct vertexInput
             {
-                float4 vertex : POSITION;						
+                float4 vertex : POSITION;
+                float2 uv : TEXCCORD0;
             };
 			
             struct v2f
             {
                 float4 vertex : SV_POSITION;   
-                float3 worldSpacePos : TEXCOORD0;
+                float2 uv : TEXCCORD0;
             };
 
             v2f vert (vertexInput v)
             {
                 v2f o;
 	            o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
-                o.worldSpacePos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                o.uv = v.uv;
                 return o;
             }
 
             float4 frag(v2f i) : SV_Target
             {
-                return float4(1,0,0,0); 
+                float d = distance(float2(0.5,0.5), i.uv);
+                return tex2D(_Albedo0, d + _Speed * _Time.y); 
             }
             
             ENDHLSL
