@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
+    public static bool _isSpotted;
 
     public NavMeshAgent Agent;
     public GameObject[] Pointers;
@@ -28,7 +29,10 @@ public class Enemy : MonoBehaviour
     }
     void Update()
     {
-        Agent.SetDestination(Pointers[_pointerIndex].transform.position);
+        if (!_isSpotted)
+        {
+            Agent.SetDestination(Pointers[_pointerIndex].transform.position);
+        }
     }
 
     void NextPointer()
