@@ -77,19 +77,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_383b5b4a8f7f4fb681edffabe1dfe7da_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 691e3f244a8ddbd40916dc0bc5e941cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_89357c1a7a5a44fb88f9c5fef7356456_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e3fa9eeb25593cb4ea971ee16ea3d8c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_3c2cffb8dd294a268b39fe73a0c618e2_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e3fa9eeb25593cb4ea971ee16ea3d8c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_3d8f9213e4d341ec8d340acfce3f43eb_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 691e3f244a8ddbd40916dc0bc5e941cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_59f82a63eb0e4fbe90bb47c9ffa014d0_Texture_1:
@@ -97,7 +97,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_9db6abcb996d430db72eca5b69ebed63_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e3fa9eeb25593cb4ea971ee16ea3d8c3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_a13a08fcdcdf45c49dde112e613f34a1_Texture_1:
@@ -109,7 +109,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_df59534a85f346e09fb911555ff3abae_Texture_1:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 691e3f244a8ddbd40916dc0bc5e941cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_ec002a12afb44a96b0d21ed9ba5ad507_Texture_1:
@@ -159,7 +159,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HeatWave: 0.02
+    - _HeatWave: 0.1
     - _Max_Size: 0.2
     - _Metallic: 0
     - _Min_size: 0.1
@@ -168,7 +168,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ScrollingSpeed: 0.2
+    - _ScrollingSpeed: 0.1
     - _Size_Amplitude: 0.3
     - _Size_Speed: 1
     - _Smoothness: 0.5
