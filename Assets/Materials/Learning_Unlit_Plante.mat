@@ -7,13 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Materials/Learning_Unlit_TO RENAME.mat
-  m_Name: Learning_Unlit_TO RENAME
-  m_Shader: {fileID: 4800000, guid: d0009e88cb890c64580b53794aac9844, type: 3}
-=======
   m_Name: Learning_Unlit_Plante
   m_Shader: {fileID: 4800000, guid: a5142f53374310744a27e95f6b714ad6, type: 3}
->>>>>>> 2a19b8887d219bd17bd5997fa9902bf0c799d390:Assets/Materials/Learning_Unlit_Plante.mat
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,19 +24,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo0:
-<<<<<<< HEAD:Assets/Materials/Learning_Unlit_TO RENAME.mat
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _Albedo1:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _GradientMap:
-        m_Texture: {fileID: 0}
-=======
         m_Texture: {fileID: 2800000, guid: 633ea1855f512794886c5d7d03a6fa8a, type: 3}
->>>>>>> 2a19b8887d219bd17bd5997fa9902bf0c799d390:Assets/Materials/Learning_Unlit_Plante.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
