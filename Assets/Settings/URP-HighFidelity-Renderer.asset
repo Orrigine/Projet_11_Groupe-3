@@ -121,9 +121,9 @@ MonoBehaviour:
     overrideShader: {fileID: 0}
     overrideShaderPassIndex: 0
     overrideMode: 1
-    overrideDepthState: 0
-    depthCompareFunction: 4
-    enableWrite: 1
+    overrideDepthState: 1
+    depthCompareFunction: 5
+    enableWrite: 0
     stencilSettings:
       overrideStencilState: 0
       stencilReference: 0
@@ -150,13 +150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    passTag: PLayerVisible
+    passTag: PlayerVisible
     Event: 300
     filterSettings:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 0
+        m_Bits: 192
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0
