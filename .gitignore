@@ -26,6 +26,7 @@
 .editorconfig
 NuGet/
 omnisharp.json
+UserSettings/Layouts/default-2022.dwlt
 
 # Gradle cache directory
 .gradle/
