@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - Bullet
   - Enemy
-  - SphereStaff
-  - Staff
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -16,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
