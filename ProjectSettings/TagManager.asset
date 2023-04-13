@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - CinemachineTarget
-  - Bullet
-  - Enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -14,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Grass
-  - Player
-  - Enemy
+  - 
+  - 
+  - 
   - 
   - 
   - 
