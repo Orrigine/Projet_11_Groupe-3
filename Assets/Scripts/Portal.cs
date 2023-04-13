@@ -5,10 +5,8 @@ public class Portal : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collide with portal");
-        if (other.gameObject.layer == 6)
+        if (other.gameObject.layer == 7)
         {
-            Debug.Log("changing scene");
             SceneManager.LoadScene("Win");
         }
     }

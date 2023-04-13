@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class BulletCollider : MonoBehaviour
 {
+    [SerializeField] string bulletName;
+    Material _fireEffect;
+    Material _frostEffect;
+
     void Start()
     {
+        _fireEffect = Resources.Load("Materials/FireEffect", typeof(Material)) as Material;
+        _frostEffect = Resources.Load("Materials/Frost Effect/Frost", typeof(Material)) as Material;
         Destroy(this.gameObject, 5);
     }
 
@@ -17,11 +23,22 @@ public class BulletCollider : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.layer == Player._playerLayer) return;
-        Destroy(this.gameObject);
-
-        if (other.gameObject.layer == Enemy._enemyLayer)
+        if (other.gameObject.layer == 8) return;
+        if (other.gameObject.layer == 6)
         {
-            Destroy(other.gameObject);
+            Material enemyMat = other.transform.Find("default").gameObject.GetComponent<Renderer>().material;
+            if (bulletName == "Fire")
+            {
+                Debug.Log(enemyMat.name);
+                enemyMat = _fireEffect;
+                enemyMat.SetFloat("Burn", 0.3f);
+            }
+            else if(bulletName == "Frost")
+            {
+
+            }
+            //Destroy(other.gameObject, 3);
         }
+        Destroy(this.gameObject);
     }
 }
