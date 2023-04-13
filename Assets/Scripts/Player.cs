@@ -93,7 +93,9 @@ public class Player : MonoBehaviour
 
     void GainHealth()
     {
-        _life += 50;
+        // if (bool = true){
+        //  _life += _healAmout;
+        // }
     }
 
     private void LoseHealth()
