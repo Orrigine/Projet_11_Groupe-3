@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - SphereStaff
   - Staff
+  - Collectable
   layers:
   - Default
   - TransparentFX

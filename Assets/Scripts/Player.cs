@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     Material _frostEffect;
 
     public static int _playerLayer;
+    public static bool hasKey = false;
 
     private int _life;
     private int _maxLife;
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        _fireEffect = Resources.Load("Materials/FireEffect", typeof(Material)) as Material;   
+        _fireEffect = Resources.Load("Materials/FireEffect", typeof(Material)) as Material;
         _frostEffect = Resources.Load("Materials/Frost Effect/Frost", typeof(Material)) as Material;
         _currentElement = Element.Fire;
     }
@@ -49,13 +50,22 @@ public class Player : MonoBehaviour
         Enemy.OnHit -= LoseHealth;
         CollectibleItem.OnHeal += GainHealth;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            hasKey = true;
+        }
+
+    }
     void Update()
     {
         Shader.SetGlobalVector("_WorldSpacePlayerPos", transform.position);
-        
+
         UpdateLife();
 
-        if(!_isDead)
+        if (!_isDead)
         {
             // Projectile
             if (Input.GetKeyDown(KeyCode.Tab))
@@ -66,9 +76,9 @@ public class Player : MonoBehaviour
 
             // Shield
             if (Input.GetKeyDown(KeyCode.E))
-              _shield.SetActive(!_shield.activeSelf);
+                _shield.SetActive(!_shield.activeSelf);
             if (Input.GetKeyDown(KeyCode.F))
-              ChangeElement();
+                ChangeElement();
         }
         if (_isDead)
         {
@@ -79,10 +89,10 @@ public class Player : MonoBehaviour
 
     public void UpdateLife()
     {
-        if(_life < 0) { _life = 0; }
+        if (_life < 0) { _life = 0; }
         if (_life > _maxLife) { _life = _maxLife; }
 
-        if (_life == 0) 
+        if (_life == 0)
         {
             _isDead = true;
             Destroy(gameObject, 3);
@@ -105,12 +115,12 @@ public class Player : MonoBehaviour
     {
         _staff = GameObject.FindWithTag("Staff");
         _sphereStaff = GameObject.FindWithTag("SphereStaff");
-        if(_currentElement == Element.Fire)
+        if (_currentElement == Element.Fire)
         {
             _sphereStaff.GetComponent<Renderer>().material = _frostEffect;
             _currentElement = Element.Frost;
         }
-        else if(_currentElement == Element.Frost)
+        else if (_currentElement == Element.Frost)
         {
             _sphereStaff.GetComponent<Renderer>().material = _fireEffect;
             _currentElement = Element.Fire;
