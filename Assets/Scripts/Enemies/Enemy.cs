@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
-
+using System;
 
 public class Enemy : MonoBehaviour
 {
@@ -28,9 +28,18 @@ public class Enemy : MonoBehaviour
     {
         EnemyPointers.OnNextPointer -= NextPointer;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 7)
+        {
+            Destroy(gameObject);
+            Player._life -= 30;
+        }
+    }
     void Update()
     {
-        if (!_isSpotted)
+        if (!_isSpotted && Pointers.Length > 2)
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
         }
