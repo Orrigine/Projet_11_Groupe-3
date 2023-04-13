@@ -17,7 +17,6 @@ public class EnemyVision : MonoBehaviour
             Enemy._isSpotted = true;
             Debug.Log("Found you");
         }
-
     }
 
     private void OnTriggerExit(Collider other)
