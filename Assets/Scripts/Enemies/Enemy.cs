@@ -7,6 +7,7 @@ using System;
 public class Enemy : MonoBehaviour
 {
     public static bool _isSpotted;
+    public static int _enemyLayer;
 
     public static event Action OnHit;
 
@@ -19,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         _pointerIndex = 0;
         _isSpotted = false;
+        _enemyLayer = gameObject.layer;
     }
 
     private void OnEnable()
