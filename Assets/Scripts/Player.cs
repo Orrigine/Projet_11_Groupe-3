@@ -62,7 +62,6 @@ public class Player : MonoBehaviour
         {
             gameObject.GetComponent<PlayerInput>().enabled = false;
         }
-        Debug.Log(_life);
     }
 
 
