@@ -15,14 +15,6 @@ public class MoveTo : MonoBehaviour
     {
         _playerSpotted = false;
     }
-/*    private void OnEnable()
-    {
-        EnemyVision.OnEnemyDetect += MoveEnemyToPlayer;
-    }
-    private void OnDisable()
-    {
-        EnemyVision.OnEnemyDetect -= MoveEnemyToPlayer;
-    }*/
 
     private void Update()
     {
