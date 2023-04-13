@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
+<<<<<<< HEAD
   - Bullet
   - Enemy
+=======
+  - FireBall
+>>>>>>> Shoot
   layers:
   - Default
   - TransparentFX

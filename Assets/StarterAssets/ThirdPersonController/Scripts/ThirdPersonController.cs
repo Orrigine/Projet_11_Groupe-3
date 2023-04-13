@@ -86,6 +86,9 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        [SerializeField] GameObject _projectileToSpawn;
+        [SerializeField] Transform _projectileSpawnLocation;
+        [SerializeField] Transform _projectileAimLocation;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -135,7 +138,7 @@ namespace StarterAssets
         private void Start()
         {
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
-            
+
             _hasAnimator = TryGetComponent(out _animator);
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
@@ -159,6 +162,7 @@ namespace StarterAssets
             JumpAndGravity();
             GroundedCheck();
             Move();
+            Shoot();
         }
 
         private void LateUpdate()
@@ -278,6 +282,21 @@ namespace StarterAssets
                 _animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
             }
         }
+
+        private void Shoot()
+        {
+            if(_input.shoot)
+            {
+                Debug.Log("TEST1230");
+                GameObject clone = Instantiate(_projectileToSpawn, _projectileSpawnLocation.transform.position, Quaternion.identity);
+                //clone.transform.forward = transform.forward;
+                Vector3 velocity = _projectileAimLocation.transform.position - clone.transform.position;
+                velocity *= 4;
+                clone.GetComponentInParent<Rigidbody>().velocity = velocity;
+            }
+            _input.shoot = false;
+        }
+
 
         private void JumpAndGravity()
         {
