@@ -287,7 +287,6 @@ namespace StarterAssets
         {
             if(_input.shoot)
             {
-                Debug.Log("TEST1230");
                 GameObject clone = Instantiate(_projectileToSpawn, _projectileSpawnLocation.transform.position, Quaternion.identity);
                 //clone.transform.forward = transform.forward;
                 Vector3 velocity = _projectileAimLocation.transform.position - clone.transform.position;
