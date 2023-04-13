@@ -15,7 +15,6 @@ public class EnemyVision : MonoBehaviour
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 4;
             MoveTo._playerSpotted = true;
             Enemy._isSpotted = true;
-            Debug.Log("Found you");
         }
 
     }
