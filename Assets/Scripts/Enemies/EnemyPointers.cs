@@ -11,7 +11,6 @@ public class EnemyPointers : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            //Enemy._pointerIndex += 1;
             OnNextPointer?.Invoke();
         }
         //Debug.Log(Enemy._pointerIndex);

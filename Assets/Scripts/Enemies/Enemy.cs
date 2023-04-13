@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         _pointerIndex = 0;
+        _isSpotted = false;
     }
 
     private void OnEnable()
