@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5502221180453793186}
   - component: {fileID: 7788448158906143442}
   - component: {fileID: 6835883010852243111}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EnemyVision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 2484330293747972546}
   - component: {fileID: 5836554164650607570}
   - component: {fileID: 1291678932116850475}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}

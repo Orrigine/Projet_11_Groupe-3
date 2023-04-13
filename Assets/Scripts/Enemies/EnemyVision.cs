@@ -9,7 +9,7 @@ public class EnemyVision : MonoBehaviour
     public static event Action OnEnemyDetect;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 7)
+        if (other.gameObject.layer == Player._playerLayer)
         {
             //gameObject.GetComponentInParent<Enemy>().enabled = false;
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 4;
@@ -20,7 +20,7 @@ public class EnemyVision : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.layer == 7)
+        if (other.gameObject.layer == Player._playerLayer)
         {
             //gameObject.GetComponentInParent<Enemy>().enabled = true;
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 2;

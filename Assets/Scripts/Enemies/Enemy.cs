@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 {
     public static bool _isSpotted;
 
+    public static event Action OnHit;
+
     public NavMeshAgent Agent;
     public GameObject[] Pointers;
 
@@ -31,15 +33,15 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 7)
+        if (collision.gameObject.layer == Player._playerLayer)
         {
             Destroy(gameObject);
-            Player._life -= 30;
+            OnHit?.Invoke();
         }
     }
     void Update()
     {
-        if (!_isSpotted && Pointers.Length > 2)
+        if (!_isSpotted && Pointers.Length >= 2)
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
         }
