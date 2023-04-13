@@ -14,8 +14,9 @@ public class Player : MonoBehaviour
     Material _fireEffect;
     Material _frostEffect;
 
+    public static int _playerLayer;
 
-    public static int _life;
+    private int _life;
     private int _maxLife;
     private bool _isDead;
 
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         _life = 100;
         _maxLife = 100;
         _isDead = false;
+        _playerLayer = gameObject.layer;
     }
 
     void Start()
@@ -36,7 +38,17 @@ public class Player : MonoBehaviour
         _currentElement = Element.Fire;
     }
 
+    private void OnEnable()
+    {
+        Enemy.OnHit += LoseHealth;
+        CollectibleItem.OnHeal += GainHealth;
+    }
 
+    private void OnDisable()
+    {
+        Enemy.OnHit -= LoseHealth;
+        CollectibleItem.OnHeal += GainHealth;
+    }
     void Update()
     {
         Shader.SetGlobalVector("_WorldSpacePlayerPos", transform.position);
@@ -70,8 +82,6 @@ public class Player : MonoBehaviour
         if(_life < 0) { _life = 0; }
         if (_life > _maxLife) { _life = _maxLife; }
 
-        CheckHeal();
-
         if (_life == 0) 
         {
             _isDead = true;
@@ -81,13 +91,18 @@ public class Player : MonoBehaviour
 
     }
 
-    void CheckHeal()
+    void GainHealth()
     {
         // if (bool = true){
         //  _life += _healAmout;
         // }
     }
-    
+
+    private void LoseHealth()
+    {
+        _life -= 30;
+    }
+
     public void ChangeElement()
     {
         _staff = GameObject.FindWithTag("Staff");
