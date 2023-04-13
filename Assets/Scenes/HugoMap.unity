@@ -838,6 +838,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
         type: 3}
+      propertyPath: FireBall
+      value: 
+      objectReference: {fileID: 1745751436853880, guid: 31016b192eafe1e4b848518ceeb7001b,
+        type: 3}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: FrozenBall
+      value: 
+      objectReference: {fileID: 1443531423890102, guid: dd3f09dbae5d3924eb2d29fccd0ec4df,
+        type: 3}
+    - target: {fileID: 4416926081852918490, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
       propertyPath: _projectileToSpawn
       value: 
       objectReference: {fileID: 1745751436853880, guid: 31016b192eafe1e4b848518ceeb7001b,
