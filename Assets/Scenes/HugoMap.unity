@@ -3739,10 +3739,15 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6a1011cde4c64154b82d6591c82f51f3, type: 2}
+    - target: {fileID: 4072870850498963469, guid: 995be38c31b6d704caa9236f936e8eeb,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5421128507626209233, guid: 995be38c31b6d704caa9236f936e8eeb,
         type: 3}
       propertyPath: m_Name
-      value: Lake
+      value: FrostLake
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
