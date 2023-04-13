@@ -16,7 +16,6 @@ public class EnemyVision : MonoBehaviour
             MoveTo._playerSpotted = true;
             Enemy._isSpotted = true;
         }
-
     }
 
     private void OnTriggerExit(Collider other)
