@@ -51,18 +51,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorSpeed: 1
+    - _ColorSpeed: 4
     - _Color_Amplitude: 1
-    - _Height_Amplitude: 0.3
-    - _Max_Size: 0.2
-    - _Max_height: 1
+    - _Height_Amplitude: 1
+    - _Max_Size: 0.53
+    - _Max_height: 0.73
     - _Min_height: -1
     - _Min_size: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size_Amplitude: 0.3
-    - _Speed: 1
+    - _Size_Amplitude: 0.661
+    - _Speed: 2
     m_Colors:
-    - _Cube_Color: {r: 0.4038178, g: 0.04049486, b: 0.6603774, a: 0}
-    - _ShiningColor: {r: 0.8962264, g: 0.7640132, b: 0.5453453, a: 0}
+    - _Cube_Color: {r: 0.19243374, g: 0, b: 0.7490196, a: 0}
+    - _ShiningColor: {r: 0, g: 0.47169828, b: 0.4811321, a: 0}
   m_BuildTextureStacks: []
