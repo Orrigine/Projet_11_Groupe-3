@@ -880,6 +880,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 762907458}
     m_Modifications:
+    - target: {fileID: 1068086098928618351, guid: 01d44c122ce770a4bb80c6e1700907fd,
+        type: 3}
+      propertyPath: m_TagString
+      value: SphereStaff
+      objectReference: {fileID: 0}
     - target: {fileID: 6241310821601975100, guid: 01d44c122ce770a4bb80c6e1700907fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -938,6 +943,11 @@ PrefabInstance:
     - target: {fileID: 7590292643829466536, guid: 01d44c122ce770a4bb80c6e1700907fd,
         type: 3}
       propertyPath: m_Name
+      value: Staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590292643829466536, guid: 01d44c122ce770a4bb80c6e1700907fd,
+        type: 3}
+      propertyPath: m_TagString
       value: Staff
       objectReference: {fileID: 0}
     m_RemovedComponents: []
