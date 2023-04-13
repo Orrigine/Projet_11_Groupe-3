@@ -1,6 +1,7 @@
 ﻿ using UnityEngine;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
+using static UnityEditor.Rendering.FilterWindow;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -86,7 +87,8 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
-        [SerializeField] GameObject _projectileToSpawn;
+        [SerializeField] GameObject FireBall;
+        [SerializeField] GameObject FrozenBall;
         [SerializeField] Transform _projectileSpawnLocation;
         [SerializeField] Transform _projectileAimLocation;
 
@@ -287,7 +289,20 @@ namespace StarterAssets
         {
             if(_input.shoot)
             {
+                GameObject _staff = GameObject.FindWithTag("Staff");
+                GameObject _sphereStaff = GameObject.FindWithTag("SphereStaff");
                 GameObject Player = GameObject.Find("PlayerArmature");
+                GameObject _projectileToSpawn = FireBall;
+
+                UnityEngine.Debug.Log(_sphereStaff.GetComponent<Renderer>().material.name);
+                if (_sphereStaff.GetComponent<Renderer>().material.name == "FireEffect (Instance)")
+                {
+                    _projectileToSpawn = FireBall;
+                }
+                else if (_sphereStaff.GetComponent<Renderer>().material.name == "Frost (Instance)")
+                {
+                    _projectileToSpawn = FrozenBall;
+                }
                 //Debug.Log();
                 GameObject clone = Instantiate(_projectileToSpawn, _projectileSpawnLocation.transform.position, Player.transform.rotation);
                 //clone.transform.forward = transform.forward;
