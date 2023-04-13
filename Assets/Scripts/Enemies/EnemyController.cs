@@ -9,26 +9,29 @@ public class MoveTo : MonoBehaviour
 
     public Transform goal;
 
-    private bool _isSpotted;
+    public static bool _playerSpotted;
 
     private void Awake()
     {
-        _isSpotted = false;
+        _playerSpotted = false;
     }
-    private void OnEnable()
+/*    private void OnEnable()
     {
         EnemyVision.OnEnemyDetect += MoveEnemyToPlayer;
     }
     private void OnDisable()
     {
         EnemyVision.OnEnemyDetect -= MoveEnemyToPlayer;
-    }
+    }*/
 
     private void Update()
     {
-        MoveEnemyToPlayer(_isSpotted);
+        if (_playerSpotted)
+        {
+            MoveEnemyToPlayer();
+        }   
     }
-    void MoveEnemyToPlayer(bool temp)
+    void MoveEnemyToPlayer()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
