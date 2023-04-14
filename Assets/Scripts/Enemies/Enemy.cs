@@ -6,7 +6,6 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
-    public static bool _isSpotted;
     public static int _enemyLayer;
 
     public static event Action OnHit;
@@ -15,6 +14,7 @@ public class Enemy : MonoBehaviour
     public GameObject[] Pointers;
 
     private int _pointerIndex;
+    private bool _isSpotted;
 
     private void Awake()
     {
@@ -26,11 +26,15 @@ public class Enemy : MonoBehaviour
     private void OnEnable()
     {
         EnemyPointers.OnNextPointer += NextPointer;
+        EnemyVision.OnEnemyDetect += PlayerSpotted;
+        EnemyVision.OnEnemyLost += PlayerLost;
     }
 
     private void OnDisable()
     {
         EnemyPointers.OnNextPointer -= NextPointer;
+        EnemyVision.OnEnemyDetect -= PlayerSpotted;
+        EnemyVision.OnEnemyLost -= PlayerLost;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -47,6 +51,7 @@ public class Enemy : MonoBehaviour
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
         }
+        //Debug.Log(_isSpotted);
     }
 
     void NextPointer()
@@ -59,5 +64,14 @@ public class Enemy : MonoBehaviour
         {
             _pointerIndex = 0;
         }
+    }
+    void PlayerSpotted()
+    {
+        _isSpotted = true;
+    }
+
+    void PlayerLost()
+    {
+        _isSpotted = false;
     }
 }
