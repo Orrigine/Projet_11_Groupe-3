@@ -2714,6 +2714,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 160150072}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder
@@ -18535,6 +18540,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 160150072}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder

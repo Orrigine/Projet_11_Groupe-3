@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 5ef8babb17cf87e418ecc6845ef5ecfc, type: 3}
+        m_Texture: {fileID: 2800000, guid: ae35c3f46db9fd442b94a73df0ec0f44, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2DLOD_383b5b4a8f7f4fb681edffabe1dfe7da_Texture_1:
@@ -67,7 +67,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 0.1
-    - _Burn: 0.3
+    - _Burn: 0
     - _Contrast: 2
     - _HeatWave: 0.1
     - _QueueControl: 0
