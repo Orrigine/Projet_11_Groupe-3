@@ -15,6 +15,9 @@ public class Colletable : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.SetActive(false);
+
+            Player.hasKey = true;
+
         }
     }
 

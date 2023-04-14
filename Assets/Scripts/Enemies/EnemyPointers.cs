@@ -9,7 +9,7 @@ public class EnemyPointers : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.layer == Enemy._enemyLayer)
         {
             OnNextPointer?.Invoke();
         }
