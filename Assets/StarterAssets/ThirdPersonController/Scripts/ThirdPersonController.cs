@@ -293,8 +293,7 @@ namespace StarterAssets
                 GameObject _sphereStaff = GameObject.FindWithTag("SphereStaff");
                 GameObject Player = GameObject.Find("PlayerArmature");
                 GameObject _projectileToSpawn = FireBall;
-
-                UnityEngine.Debug.Log(_sphereStaff.GetComponent<Renderer>().material.name);
+                
                 if (_sphereStaff.GetComponent<Renderer>().material.name == "FireEffect (Instance)")
                 {
                     _projectileToSpawn = FireBall;
