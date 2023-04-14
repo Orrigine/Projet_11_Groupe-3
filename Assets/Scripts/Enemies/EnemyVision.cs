@@ -7,14 +7,15 @@ using UnityEngine.AI;
 public class EnemyVision : MonoBehaviour
 {
     public static event Action OnEnemyDetect;
+    public static event Action OnEnemyLost;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == Player._playerLayer)
         {
             //gameObject.GetComponentInParent<Enemy>().enabled = false;
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 4;
-            MoveTo._playerSpotted = true;
-            Enemy._isSpotted = true;
+            OnEnemyDetect?.Invoke();
+            Debug.Log("yio");
         }
     }
 
@@ -24,8 +25,7 @@ public class EnemyVision : MonoBehaviour
         {
             //gameObject.GetComponentInParent<Enemy>().enabled = true;
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 2;
-            MoveTo._playerSpotted = false;
-            Enemy._isSpotted = false; 
+            OnEnemyLost?.Invoke();
         }
     }
 }
