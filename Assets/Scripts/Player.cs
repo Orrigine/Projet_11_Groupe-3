@@ -51,14 +51,6 @@ public class Player : MonoBehaviour
         CollectibleItem.OnHeal += GainHealth;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Collectable"))
-        {
-            hasKey = true;
-        }
-
-    }
     void Update()
     {
         Shader.SetGlobalVector("_WorldSpacePlayerPos", transform.position);
