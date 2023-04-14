@@ -8,7 +8,6 @@ public class BulletCollider : MonoBehaviour
     Material _fireEffect;
     Material _frostEffect;
 
-
     void Start()
     {
         _fireEffect = Resources.Load("Materials/FireEffect", typeof(Material)) as Material;
@@ -25,6 +24,21 @@ public class BulletCollider : MonoBehaviour
     {
         if (other.gameObject.layer == Player._playerLayer) return;
         if (other.gameObject.layer == 8) return;
+        if (other.gameObject.layer == 6)
+        {
+            Material enemyMat = other.transform.Find("default").gameObject.GetComponent<Renderer>().material;
+            if (bulletName == "Fire")
+            {
+                Debug.Log(enemyMat.name);
+                enemyMat = _fireEffect;
+                enemyMat.SetFloat("Burn", 0.3f);
+            }
+            else if(bulletName == "Frost")
+            {
+
+            }
+            //Destroy(other.gameObject, 3);
+        }
         Destroy(this.gameObject);
     }
 }

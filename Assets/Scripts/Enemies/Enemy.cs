@@ -15,22 +15,12 @@ public class Enemy : MonoBehaviour
     public GameObject[] Pointers;
 
     private int _pointerIndex;
-    [SerializeField] Material _fireEffect;
-    [SerializeField] Material _frostEffect;
-    GameObject child;
 
-    float burn;
     private void Awake()
     {
         _pointerIndex = 0;
         _isSpotted = false;
         _enemyLayer = gameObject.layer;
-    }
-
-    private void Start()
-    {
-        child = gameObject.transform.GetChild(0).gameObject;
-        burn = 0;
     }
 
     private void OnEnable()
@@ -45,42 +35,17 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
         if (collision.gameObject.layer == Player._playerLayer)
         {
             Destroy(gameObject);
             OnHit?.Invoke();
         }
-        if (collision.gameObject.layer == 8)
-        {
-            if(collision.gameObject.name == "Fireball(Clone)")
-                child.GetComponent<Renderer>().material = _fireEffect;
-            if (collision.gameObject.name == "Frozen Spike(Clone)")
-            {
-                child.GetComponent<Renderer>().material = _frostEffect;
-                Destroy(gameObject,3);
-            }
-        }
     }
-
     void Update()
     {
         if (!_isSpotted && Pointers.Length >= 2)
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
-        }
-        if (child.GetComponent<Renderer>().material.name == "FireDisolving (Instance)")
-        {
-            if(burn <= 1.1)
-            {
-                burn += 0.0025f;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
-            Debug.Log(burn);
-            child.GetComponent<Renderer>().material.SetFloat("_Burn", burn);
         }
     }
 
