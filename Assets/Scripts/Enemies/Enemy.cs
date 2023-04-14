@@ -69,7 +69,7 @@ public class Enemy : MonoBehaviour
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
         }
-        if (child.GetComponent<Renderer>().material.name == "FireDisolving (Instance)")
+        if (child.GetComponent<Renderer>().material.name == "Fire Disolve (Instance)")
         {
             if(burn <= 1.1)
             {
@@ -79,7 +79,6 @@ public class Enemy : MonoBehaviour
             {
                 Destroy(gameObject);
             }
-            Debug.Log(burn);
             child.GetComponent<Renderer>().material.SetFloat("_Burn", burn);
         }
     }
