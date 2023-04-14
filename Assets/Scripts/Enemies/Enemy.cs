@@ -6,6 +6,7 @@ using System;
 
 public class Enemy : MonoBehaviour
 {
+    public static bool _isSpotted;
     public static int _enemyLayer;
 
     public static event Action OnHit;
@@ -14,8 +15,11 @@ public class Enemy : MonoBehaviour
     public GameObject[] Pointers;
 
     private int _pointerIndex;
-    private bool _isSpotted;
+    [SerializeField] Material _fireEffect;
+    [SerializeField] Material _frostEffect;
+    GameObject child;
 
+    float burn;
     private void Awake()
     {
         _pointerIndex = 0;
@@ -23,35 +27,61 @@ public class Enemy : MonoBehaviour
         _enemyLayer = gameObject.layer;
     }
 
+    private void Start()
+    {
+        child = gameObject.transform.GetChild(0).gameObject;
+        burn = 0;
+    }
+
     private void OnEnable()
     {
         EnemyPointers.OnNextPointer += NextPointer;
-        EnemyVision.OnEnemyDetect += PlayerSpotted;
-        EnemyVision.OnEnemyLost += PlayerLost;
     }
 
     private void OnDisable()
     {
         EnemyPointers.OnNextPointer -= NextPointer;
-        EnemyVision.OnEnemyDetect -= PlayerSpotted;
-        EnemyVision.OnEnemyLost -= PlayerLost;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.gameObject.layer == Player._playerLayer)
         {
             Destroy(gameObject);
             OnHit?.Invoke();
         }
+        if (collision.gameObject.layer == 8)
+        {
+            if(collision.gameObject.name == "Fireball(Clone)")
+                child.GetComponent<Renderer>().material = _fireEffect;
+            if (collision.gameObject.name == "Frozen Spike(Clone)")
+            {
+                child.GetComponent<Renderer>().material = _frostEffect;
+                Destroy(gameObject,3);
+            }
+        }
     }
+
     void Update()
     {
         if (!_isSpotted && Pointers.Length >= 2)
         {
             Agent.SetDestination(Pointers[_pointerIndex].transform.position);
         }
-        //Debug.Log(_isSpotted);
+        if (child.GetComponent<Renderer>().material.name == "FireDisolving (Instance)")
+        {
+            if(burn <= 1.1)
+            {
+                burn += 0.0025f;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            Debug.Log(burn);
+            child.GetComponent<Renderer>().material.SetFloat("_Burn", burn);
+        }
     }
 
     void NextPointer()
@@ -64,14 +94,5 @@ public class Enemy : MonoBehaviour
         {
             _pointerIndex = 0;
         }
-    }
-    void PlayerSpotted()
-    {
-        _isSpotted = true;
-    }
-
-    void PlayerLost()
-    {
-        _isSpotted = false;
     }
 }

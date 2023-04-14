@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4587297449207456}
   - component: {fileID: 96627417736034468}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 4561986670947484}
   - component: {fileID: 198822539915754334}
   - component: {fileID: 199048442743463776}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Stones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4978,7 +4978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4645266715628004}
   - component: {fileID: 96093214728771212}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Trail_AB_Bot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5123,7 +5123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4755271406701676}
   - component: {fileID: 96559612086550826}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Trail_AB_Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5270,9 +5270,9 @@ GameObject:
   - component: {fileID: 65468306030499414}
   - component: {fileID: 54187506388765952}
   - component: {fileID: -4928024238929518173}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Frozen Spike
-  m_TagString: Player
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5338,13 +5338,13 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 384
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-4928024238929518173
 MonoBehaviour:
@@ -5355,9 +5355,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1443531423890102}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 797db1e8b1d0b96448369126ce8f749a, type: 3}
+  m_Script: {fileID: 11500000, guid: a78ccc76c1cea61468f3b8a23df5def1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletName: Frost
 --- !u!1 &1764362732519724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5369,7 +5370,7 @@ GameObject:
   - component: {fileID: 4984110845018444}
   - component: {fileID: 198837562823470882}
   - component: {fileID: 199908137125559044}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: SmokeOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10210,7 +10211,7 @@ GameObject:
   - component: {fileID: 4483672215397482}
   - component: {fileID: 199649053907205536}
   - component: {fileID: 198663865746530446}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Spike
   m_TagString: Bullet
   m_Icon: {fileID: 0}
