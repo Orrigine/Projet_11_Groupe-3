@@ -2090,6 +2090,11 @@ PrefabInstance:
       objectReference: {fileID: 1398202182}
     - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
+      propertyPath: _fireEffect
+      value: 
+      objectReference: {fileID: 2100000, guid: becdf01078a204a42a1bac3cb8c30f01, type: 2}
+    - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
       propertyPath: Pointers.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2293,6 +2298,11 @@ PrefabInstance:
       propertyPath: Agent
       value: 
       objectReference: {fileID: 701596915}
+    - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: _fireEffect
+      value: 
+      objectReference: {fileID: 2100000, guid: becdf01078a204a42a1bac3cb8c30f01, type: 2}
     - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: Pointers.Array.size
