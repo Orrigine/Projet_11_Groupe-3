@@ -78,6 +78,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Collectable"))
+        {
+            hasKey = true;
+            other.gameObject.SetActive(false);
+        }
+    }
 
     public void UpdateLife()
     {

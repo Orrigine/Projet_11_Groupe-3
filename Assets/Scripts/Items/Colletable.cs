@@ -16,8 +16,6 @@ public class Colletable : MonoBehaviour
         {
             gameObject.SetActive(false);
 
-            Player.hasKey = true;
-
         }
     }
 
