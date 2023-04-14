@@ -203,6 +203,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0462eaa435562964eafe30d329e735cd, type: 3}
+--- !u!4 &57366393 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
+    type: 3}
+  m_PrefabInstance: {fileID: 453912755}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &82177524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1813,11 +1819,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Variant 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: _fireEffect
+      value: 
+      objectReference: {fileID: 2100000, guid: becdf01078a204a42a1bac3cb8c30f01, type: 2}
     - target: {fileID: 7018711246599714104, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 57366393}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder
@@ -2698,6 +2714,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 160150072}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder
@@ -18070,11 +18091,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6917247953894079500, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: _fireEffect
+      value: 
+      objectReference: {fileID: 2100000, guid: becdf01078a204a42a1bac3cb8c30f01, type: 2}
     - target: {fileID: 7018711246599714104, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 160150072}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder
@@ -18509,6 +18540,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
+    - target: {fileID: 7514885208318325757, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
+        type: 3}
+      propertyPath: goal
+      value: 
+      objectReference: {fileID: 160150072}
     - target: {fileID: 8910852857318044878, guid: aeb481fa3c57eff41a2b080c51ba0ee0,
         type: 3}
       propertyPath: m_RootOrder

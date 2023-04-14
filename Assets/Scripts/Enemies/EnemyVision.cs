@@ -15,7 +15,6 @@ public class EnemyVision : MonoBehaviour
             //gameObject.GetComponentInParent<Enemy>().enabled = false;
             gameObject.GetComponentInParent<NavMeshAgent>().speed = 4;
             OnEnemyDetect?.Invoke();
-            Debug.Log("yio");
         }
     }
 
